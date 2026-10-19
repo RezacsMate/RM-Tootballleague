@@ -23,5 +23,38 @@ namespace _10._19BB
             GoalsFor = 0;
             GoalsAgainst = 0;
         }
+        public void AddResult(int kapott, int lott)
+        {
+            GoalsFor = lott;
+            GoalsAgainst = kapott;
+            if(GoalsAgainst < GoalsFor)
+            {
+                _points += 3;
+            }
+            else if (GoalsAgainst > GoalsFor)
+            {
+                _points += 0;
+            }
+            else
+            {
+                _points += 0;
+            }
+
+        }
+        public int GoalDifference()
+        {
+            if(GoalsFor > GoalsAgainst)
+            {
+                return GoalsFor - GoalsAgainst;
+            }
+            else if(GoalsFor < GoalsAgainst)
+            {
+                return GoalsAgainst - GoalsFor;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }
