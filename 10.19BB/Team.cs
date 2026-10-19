@@ -18,10 +18,10 @@ namespace _10._19BB
         public int GoalsAgainst { get { return _goalsAgainst; } set { _goalsAgainst = value; } }
         public Team(string name )
         {
-            _name = name;
-            _points = 0;
-            _goalsFor = 0;
-            _goalsAgainst = 0;
+            Name = name;
+            Points = 0;
+            GoalsFor = 0;
+            GoalsAgainst = 0;
         }
     }
 }
