@@ -18,10 +18,43 @@ namespace _10._19BB
         public int GoalsAgainst { get { return _goalsAgainst; } set { _goalsAgainst = value; } }
         public Team(string name )
         {
-            _name = name;
-            _points = 0;
-            _goalsFor = 0;
-            _goalsAgainst = 0;
+            Name = name;
+            Points = 0;
+            GoalsFor = 0;
+            GoalsAgainst = 0;
+        }
+        public void AddResult(int kapott, int lott)
+        {
+            GoalsFor = lott;
+            GoalsAgainst = kapott;
+            if(GoalsAgainst < GoalsFor)
+            {
+                _points += 3;
+            }
+            else if (GoalsAgainst > GoalsFor)
+            {
+                _points += 0;
+            }
+            else
+            {
+                _points += 0;
+            }
+
+        }
+        public int GoalDifference()
+        {
+            if(GoalsFor > GoalsAgainst)
+            {
+                return GoalsFor - GoalsAgainst;
+            }
+            else if(GoalsFor < GoalsAgainst)
+            {
+                return GoalsAgainst - GoalsFor;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
